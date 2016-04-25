@@ -52,11 +52,11 @@ class ApiProxyServiceProvider extends ServiceProvider {
      * @return void
      */
     public function registerApiProxy() {
-        $this->app->bindShared('api-proxy.proxy', function($app) {
+        $this->app->bind('api-proxy.proxy', function($app) {
             $params = $app['config']['proxy'];
             $proxy = new Proxy($params);
             return $proxy;
-        });
+        }, true);
 
         $this->app->bind('Cellcote\LaravelProxify\Proxy', function($app) {
             return $app['api-proxy.proxy'];
