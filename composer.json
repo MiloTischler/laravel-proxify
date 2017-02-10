@@ -1,5 +1,5 @@
 {
-	"name": "MiloTischler/laravel-proxify",
+	"name": "milotischler/laravel-proxify",
 	"description": "A Laravel proxy package for SPA javascript API calls",
 	"keywords": [
 	"laravel",
